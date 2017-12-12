@@ -3,10 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <title>Box Model Info - Contact</title>
-  
-  <link rel="stylesheet" type="text/css" href="styles/style-contact.css">
-  
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" 
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" 
+        crossorigin="anonymous">
   <style>
+    img {
+        width:40%;
+    }
+
     /* Style inputs with type="text", select elements and textareas */
     input[type=text], select, textarea {
         width: 100%; /* Full width */
@@ -46,40 +51,32 @@
   <header>
     <img src="https://images.pexels.com/photos/374906/pexels-photo-374906.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" alt="The cutest puppy EVER!!" >
     <h1>Box Model Info Sheet</h1>
-
-    
-    
-<!--    changed-->
-    
-<!--
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        
-        <li><a href="https://www.google.com/" target="_blank">Google</a></li>
-      </ul>
-    </nav>
--->
-
-    
-<ul class="nav">
-  <li class="nav-item">
-    <a class="nav-link active" href="index.html">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="contact.html">Contact</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="https://www.google.com/" target="_blank">Google</a>
-  </li>
-<!--
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#">Disabled</a>
-  </li>
--->
-</ul>    
-  
+    <!-- non-boostrap version of nav:  -->
+    <!--<nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://www.google.com/" target="_blank">Google</a></li>
+          </ul>
+        </nav>
+    -->
+    <!--  boostrap version of nav:  -->
+     <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.google.com/" target="_blank">Google</a>
+      </li>
+    <!--
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    -->
+    </ul>    
   </header>
 
   <article>
@@ -107,6 +104,7 @@
 
       </form>
   </article>
+
   <footer>
     <p>Source: <a href="http://www.w3schools.com/css/css_boxmodel.asp">W3Schools</a>.</p>
   </footer>
