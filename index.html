@@ -7,94 +7,217 @@
         href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" 
         integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" 
         crossorigin="anonymous">
+  <!-- for Bootstrap, to ensure proper rendering and touch zooming: -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+    .btn-info.pink {
+      border-color: magenta;
+    }    
+    
+    .carou {
+      max-width: 500px;
+      background-color: #ccffcc;
+    }
+    
+    nav {
+      background-color: #ccccff;
+    }
+
+    article {
+      background-color: #ffcccc;
+    }
+
+    aside {
+      background-color: #ccffcc;
+    }
+    
+    footer {
+      background-color: #ccccff;
+    }
+
     img {
         width: 40%;
     }
+    
+    button {
+      margin-left: 30px;
+      margin-bottom: 30px;
+    }
+    
+    .jumbotron {
+      width: 50%;
+      float: right;
+    }
+
   </style>
 </head>
 <body>
-  <header>
-    <img src="https://images.pexels.com/photos/374906/pexels-photo-374906.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" alt="The cutest puppy EVER!!" >
-    <h1>Bootstrap Demo Page</h1>
-<!-- non-boostrap version of nav:  -->
-<!--<nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="https://www.google.com/" target="_blank">Google</a></li>
-      </ul>
-    </nav>
--->
-<!--  boostrap version of nav:  -->
- <ul class="nav">
-  <li class="nav-item">
-    <a class="nav-link active" href="index.html">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="contact.html">Contact</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="https://www.google.com/" target="_blank">Google</a>
-  </li>
-<!--
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#">Disabled</a>
-  </li>
--->
-</ul>    
-
-  </header>
-
-  <article>
-    <h2>How The Box Model Works</h2>
-
-     <figure>
-      <img  src="http://t.cbsimg.net/i/tr/gallery/Melonfire/css_image100001.gif">
-      <figcaption>The CSS Box Model</figcaption>
-    </figure>
-
-    <p>All HTML elements can be considered as boxes. The box model wraps around the element and consists of the margin, border, padding, and content itself.</p>
-
-
-    <p>The box model allows us to add a border around elements, and control the space between them. </p>
-
-
-    <p>Example of styling with the box model:</p>
-    <pre>
-      .box {
-        width: 30%;
-        padding: 1em;
-        border: 5px solid gray;
-        margin: 0;
-      }
+  <div class="container">
+    <header>
+      <h1>Electric Guitar Gear for Quiet Cranked-Amp Tone</h1>
       
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Components demo'd
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Dropdown component</a>
+          <a class="dropdown-item" href="#nav">Nav component</a>
+          <a class="dropdown-item" href="#carousel">Carousel component</a>
+          <a class="dropdown-item" href="#jumbotron">Jumbotron component</a>
+          <a class="dropdown-item" href="#aside">Aside element</a>
+          <a class="dropdown-item" href="#footer">Footer element</a>
+        </div>
+      </div>
+      
+      <p>
+        Assignment 9 for UW HTML5 class: a clean (professional, functional) demonstration of using Bootstrap components, with low-profile notes about Bootstrap and web development.
+      </p>
+      <p>
+        Bootstrap .css is linked via link tag at top of page.
+      </p>
+      <p>
+        jQuery .js is linked via script tag at bottom of page.
+      </p>
+  <!--    
+  http://getbootstrap.com/getting-started/
+  http://getbootstrap.com/components
 
-    </pre>
+  The new page can contain any content, such as:
+  o  One of your skills/interests outside of web development
+  o  Profile of a developer you find inspiring
+  o  List of links to web development learning resources
+  o  Information about a web development topic you find interesting. 
 
-    <p> The different parts of the box model in more detail:     </p>
-      <ol>
-        <li><em>Content</em> - The content of the box, where text and images appear.</li>
-        <li><em>Padding</em> - Clears an area around the content. The padding is transparent.</li>
-        <li><em>Border</em> - A border that goes around the padding and content.</li>
-        <li><em>Margin</em> - Clears an area outside the border. The margin is transparent.</li>
+  It should be at least 80 lines of HTML long (whitespace lines don't count). 
+  -->
+
+  <nav>
+    <h2><a name="nav"/>Nav component</h2>
+    <!-- http://getbootstrap.com/docs/4.0/components/navs/#base-nav -->
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://google.com/" target="_blank">Google</a>
+      </li>
+    </ul>    
+  </nav>
+
+  <!-- http://getbootstrap.com/docs/4.0/components/carousel/ -->
+  <h2><a name="carousel"/>Carousel component</h2>
+  <section class="carou">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
       </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="images/CS-A2-4.JPG" alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>ClearSonic - A24</h3>
+            <p>ClearSonic - A24 Plexiglass speaker shield</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="images/ATTSPICE.GIF" alt="Second slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Silent Speaker</h3>
+            <p>Harry Kolbe Soundsmith - Silent Speaker and The Attenuator</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="images/CABTONE.JPG" alt="Third slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Cab-Tone</h3>
+            <p>Voodoo Labs - Cab-Tone speaker simulation filter</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="images/celestionbluecd.gif" alt="Third slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Blue</h3>
+            <p>Celestion - Blue speaker</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
 
-  </article>
+    </header>
 
+    <article>
+      <h2><a name="article"/>Electric Guitar Processing Equipment</h2>
+      <p>
+        Rare, missing-link product types that are useful for album-quality electric guitar gear at bedroom volumes.
+      </p>
 
-  <aside>
-    <h3>CSS Tip</h3>
-    <p>When you set the width and height properties of an element with CSS, you just set the width and height of the content area. To calculate the full size of an element, you must also add the padding, borders and margins.</p>
-  </aside>
+      <figure>
+        <img  src="images/ATTSPICE.GIF">
+        <figcaption>Harry Kolbe Soundsmith - Silent Speaker and The Attenuator</figcaption>
+      </figure>
+      
+      <button type="button" class="btn btn-info pink" data-toggle="dropdown" aria-expanded="false">Tone Tip</button>
 
-  <footer>
-    <p>Source: <a href="http://www.w3schools.com/css/css_boxmodel.asp">W3Schools</a>.</p>
-  </footer>
+      <!-- http://getbootstrap.com/docs/4.0/components/jumbotron/ -->
+      <div class="jumbotron">
+        <h1 class="display-3"><a name="jumbotron"/>Reactive loads</h1>
+        <p class="lead">
+          Reactive loads are the key to dynamic power-valve distortion
+        </p>
+        <hr class="my-4">
+        <p>
+          The Jumbotron component uses utility classes for typography and spacing to space content out within the larger container.
+        </p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="http://amptone.com" role="button">Learn more at Amptone.com</a>
+        </p>
+      <p>
+        <em>This is a Jumbotron component.</em>
+      </p>
+      </div>
+    </article>
 
-  <!--added scripts:  -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <aside>
+      <h3><a name="aside"/>Low-volume tips</h3>
+      <p>
+        Use a reactive load, not a resistive load.
+      </p>
+      <p>
+        Use a steep treble rolloff after the load, such as through a cab-sim filter along with treble tone controls or treble eq bands.
+      </p>
+      <p>
+        <em>An aside.</em>
+      </p>
+    </aside>
+
+    <footer>
+      <h3><a name="footer"/>Footer</h3>
+      <p>
+        Source: <a href="http://amptone.com">Amptone.com</a>.
+      </p>
+    </footer>
+  </div>
+
+  <!--added scripts: jquery, popper, bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
 </html>
