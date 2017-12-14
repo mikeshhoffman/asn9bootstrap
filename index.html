@@ -9,47 +9,6 @@
         crossorigin="anonymous">
   <!-- for Bootstrap, to ensure proper rendering and touch zooming: -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    .btn-info.pink {
-      border-color: magenta;
-    }    
-    
-    .carou {
-      max-width: 500px;
-      background-color: #ccffcc;
-    }
-    
-    nav {
-      background-color: #ccccff;
-    }
-
-    article {
-      background-color: #ffcccc;
-    }
-
-    aside {
-      background-color: #ccffcc;
-    }
-    
-    footer {
-      background-color: #ccccff;
-    }
-
-    img {
-        width: 40%;
-    }
-    
-    button {
-      margin-left: 30px;
-      margin-bottom: 30px;
-    }
-    
-    .jumbotron {
-      width: 50%;
-      float: right;
-    }
-
-  </style>
 </head>
 <body>
   <div class="container">
@@ -92,8 +51,8 @@
   It should be at least 80 lines of HTML long (whitespace lines don't count). 
   -->
 
-  <nav>
-    <h2><a name="nav"/>Nav component</h2>
+  <nav id="nav">
+    <h2>Nav component</h2>
     <!-- http://getbootstrap.com/docs/4.0/components/navs/#base-nav -->
     <ul class="nav">
       <li class="nav-item">
@@ -109,7 +68,7 @@
   </nav>
 
   <!-- http://getbootstrap.com/docs/4.0/components/carousel/ -->
-  <h2><a name="carousel"/>Carousel component</h2>
+  <h2 id="carousel">Carousel component</h2>
   <section class="carou">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -160,8 +119,8 @@
 
     </header>
 
-    <article>
-      <h2><a name="article"/>Electric Guitar Processing Equipment</h2>
+    <article id="article">
+      <h2>Electric Guitar Processing Equipment</h2>
       <p>
         Rare, missing-link product types that are useful for album-quality electric guitar gear at bedroom volumes.
       </p>
@@ -174,8 +133,8 @@
       <button type="button" class="btn btn-info pink" data-toggle="dropdown" aria-expanded="false">Tone Tip</button>
 
       <!-- http://getbootstrap.com/docs/4.0/components/jumbotron/ -->
-      <div class="jumbotron">
-        <h1 class="display-3"><a name="jumbotron"/>Reactive loads</h1>
+      <div class="jumbotron" id="jumbotron">
+        <h2 class="display-3">Reactive loads</h2>
         <p class="lead">
           Reactive loads are the key to dynamic power-valve distortion
         </p>
@@ -192,8 +151,8 @@
       </div>
     </article>
 
-    <aside>
-      <h3><a name="aside"/>Low-volume tips</h3>
+    <aside id="aside">
+      <h3>Low-volume tips</h3>
       <p>
         Use a reactive load, not a resistive load.
       </p>
@@ -205,8 +164,8 @@
       </p>
     </aside>
 
-    <footer>
-      <h3><a name="footer"/>Footer</h3>
+    <footer id="footer">
+      <h3>Footer</h3>
       <p>
         Source: <a href="http://amptone.com">Amptone.com</a>.
       </p>
